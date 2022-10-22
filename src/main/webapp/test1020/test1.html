@@ -4,6 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <title>JSON 예제</title>
+<script type="text/javascript">
+function loadJson(a, b) {
+	//r.json() : json형태로 분석하여 객체로 리턴 
+    fetch('test1.jsp?value='+document.value)
+    .then ((r) => r.text())
+    .then ((data) => {
+        let result = document.querySelector("#result")
+        for (s of data) {
+        	result.innerHTML +='<p>'+"-"+s.b +'</p>'
+		}
+    	
+    })
+}
+</script>
 </head>
 <body>
 <h1>서울의 구 정보</h1>
