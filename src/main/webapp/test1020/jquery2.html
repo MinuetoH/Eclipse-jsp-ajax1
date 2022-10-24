@@ -7,8 +7,8 @@
 src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 </script>
 <script type="text/javascript">
-  $(function(){
-     $("input[type=button]").click(function(){
+  $(function(){	//window.onload 이벤트 같은 기능
+     $("input[type=button]").click(function(){	//태그 선택 방식
     	 $.ajax("test2.jsp",{
     		 success:function(data){
    			     htmldata = "<br><table border='1'>"
