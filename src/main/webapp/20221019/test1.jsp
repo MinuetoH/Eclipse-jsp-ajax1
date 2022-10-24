@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%-- /ajax1/src/main/webapp/20221019/test1.jsp --%>
 <table>
 <tr><td><font color="red"> sample jsp</font></td></tr>

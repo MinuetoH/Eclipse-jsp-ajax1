@@ -2,36 +2,36 @@
 <!-- /ajax1/src/main/webapp/20221019/ajax1.html -->
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>XMLHttpRequest °´Ã¼</title>
+<meta charset="UTF-8">
+<title>XMLHttpRequest ê°ì²´</title>
 <script type="text/javascript">
 	function loadJsp() {
 		/*
-		 * new XMLHttpRequest() : ajax °´Ã¼. ¼­¹ö¿¡ ¿äÃ» ÈÄ, ÀÀ´äÀ» ¹ŞÀ» ¼ö ÀÖ´Â 
-		 *						  ±â´ÉÀ» °¡Áø °´Ã¼.
+		 * new XMLHttpRequest() : ajax ê°ì²´. ì„œë²„ì— ìš”ì²­ í›„, ì‘ë‹µì„ ë°›ì„ ìˆ˜ ìˆëŠ” 
+		 *						  ê¸°ëŠ¥ì„ ê°€ì§„ ê°ì²´.
 		 */
 		const xhttp = new XMLHttpRequest()
-		 //"GET" : ¼­¹ö¿¡ ¿äÃ»¹æ½Ä GET ¹æ½ÄÀ¸·Î ¼³Á¤
-		 //"test1.jsp": ¿äÃ»ÆäÀÌÁö
+		 //"GET" : ì„œë²„ì— ìš”ì²­ë°©ì‹ GET ë°©ì‹ìœ¼ë¡œ ì„¤ì •
+		 //"test1.jsp": ìš”ì²­í˜ì´ì§€
 		xhttp.open("GET", "test1.jsp")
-		xhttp.send()	//¼­¹ö¿¡ ¿äÃ»
+		xhttp.send()	//ì„œë²„ì— ìš”ì²­
 		/*
-		 * onreadystatechange : ÄÃ¹éÇÔ¼öµî·Ï º¯¼ö
+		 * onreadystatechange : ì»¬ë°±í•¨ìˆ˜ë“±ë¡ ë³€ìˆ˜
 		 * readyState
-		 *		0	:	°´Ã¼ »ı¼º
-		 *		1	:	open() ½ÇÇà
-		 *		2	:	send() ½ÇÇà, 
-		 *		3	:	ÀÀ´äÀÇ ÀÏºÎ¸¸ ¼ö½Å. ÀÀ´ä Áß
-		 *		4	:	ÀÀ´ä ¿Ï·á
-		 * status : Http ÀÀ´äÄÚµå
-		 *	 200 : Á¤»óÀÀ´ä
-		 *	 400 : ÇØ´ç ÆäÀÌÁö ¾øÀ½
-		 *	 500 : ÇØ´ç ÆäÀÌÁö ¿À·ù
+		 *		0	:	ê°ì²´ ìƒì„±
+		 *		1	:	open() ì‹¤í–‰
+		 *		2	:	send() ì‹¤í–‰, 
+		 *		3	:	ì‘ë‹µì˜ ì¼ë¶€ë§Œ ìˆ˜ì‹ . ì‘ë‹µ ì¤‘
+		 *		4	:	ì‘ë‹µ ì™„ë£Œ
+		 * status : Http ì‘ë‹µì½”ë“œ
+		 *	 200 : ì •ìƒì‘ë‹µ
+		 *	 400 : í•´ë‹¹ í˜ì´ì§€ ì—†ìŒ
+		 *	 500 : í•´ë‹¹ í˜ì´ì§€ ì˜¤ë¥˜
 		 */
 		xhttp.onreadystatechange=function(){
-			 //¼­¹öÀÇ ÀÀ´äÀÌ Á¤»óÀûÀ¸·Î ¿Ï·áµÈ °æ¿ì
+			 //ì„œë²„ì˜ ì‘ë‹µì´ ì •ìƒì ìœ¼ë¡œ ì™„ë£Œëœ ê²½ìš°
 			if(this.readyState=4 && this.status==200) {
-				//responseText : ¼­¹öÀÇ ÀÀ´ä ¸Ş¼¼Áö
+				//responseText : ì„œë²„ì˜ ì‘ë‹µ ë©”ì„¸ì§€
 				alert(this.responseText)
 				document.getElementById("demo").innerHTML=this.responseText
 			}
@@ -40,8 +40,8 @@
 </script>
 </head>
 <body>
-<h2>XMLHttpRequest °´Ã¼</h2>
-<button type="button" onclick="loadJsp()">¿äÃ»</button>
+<h2>XMLHttpRequest ê°ì²´</h2>
+<button type="button" onclick="loadJsp()">ìš”ì²­</button>
 <div id="demo">
 </div>
 </body>

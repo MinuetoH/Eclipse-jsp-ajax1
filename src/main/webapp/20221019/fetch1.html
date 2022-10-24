@@ -2,21 +2,21 @@
 <!-- /ajax1/src/main/webapp/20221019/fetch1.html -->
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>fetch ¿¹Á¦</title>
+<meta charset="UTF-8">
+<title>fetch ì˜ˆì œ</title>
 <script>
 	function loadJsp() {
-		//¿ø°Ý È£ÃâÇÔ¼ö. ECMA6¿¡¼­ Ãß°¡.
+		//ì›ê²© í˜¸ì¶œí•¨ìˆ˜. ECMA6ì—ì„œ ì¶”ê°€.
 		fetch('test1.jsp')
-		.then((response) => response.text())	//text() : ÀÀ´ä¸Þ¼¼Áö
+		.then((response) => response.text())	//text() : ì‘ë‹µë©”ì„¸ì§€
 		.then((data) => 
 		document.querySelector("#demo").innerHTML = data)
 	}
 </script>
 </head>
 <body>
-<h2>fetch ÇÔ¼ö</h2>
-<button type="button" onclick="loadJsp()">¿äÃ»</button>
+<h2>fetch í•¨ìˆ˜</h2>
+<button type="button" onclick="loadJsp()">ìš”ì²­</button>
 <div id="demo"></div>
 </body>
 </html>
